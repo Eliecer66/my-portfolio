@@ -28,7 +28,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <nav className="flex justify-around w-full p-5">
+          <div className="flex basis-1/2">Jorge</div>
+          <div className="flex basis-1/2 justify-around">
+            <a>Home</a>
+            <a>About</a>
+            <a>Projects</a>
+            <a>Stats</a>
+          </div>
+        </nav>
         {children}
+        <footer className="bg-dark-primary px-4 py-10">
+          © 2024 Jorge Acosta
+        </footer>
       </body>
     </html>
   );

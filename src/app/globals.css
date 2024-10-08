@@ -11,17 +11,37 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    /* Dark Palette */
+    --dark-primary: #181C14;
+    --dark-secondary: #3C3D37;
+    --dark-tertiary: #697565;
+    --dark-cuartiary: #ECDFCC;
   }
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--dark-primary);
+  font-family: "Lato", sans-serif;
+  margin: 0;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.container--max-width {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+
+.icon--container-bg img {
+  background-color: var(--dark-secondary);
+}
+
+.MuiGauge-valueText>text {
+  fill: inherit;
 }
