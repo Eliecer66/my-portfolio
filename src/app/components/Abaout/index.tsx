@@ -27,10 +27,10 @@ const About = () => {
               the clients want, I a hundred percent committed with the company given
             </p>
           </div>
-          <div className='rounded-xl p-4' >
-            <div className='flex justify-between w-full '>
-              <p className=" text-lg font-black">Career</p>
-              <p className=" text-lg font-black">Path</p>
+          <div className='bg-dark-secondary rounded-xl p-4' >
+            <div className='flex bg-dark-secondary justify-between w-full '>
+              <p className="bg-dark-secondary text-lg font-black">Career</p>
+              <p className="bg-dark-secondary text-lg font-black">Path</p>
             </div>
             <p className='flex mt-2 p-2'>
               System analysis is a career that has as a goal give to professionals the necessary tools to address projects successfully focusing on optimal performance and user experience. System analysis professionals have to design the right paths to offer the costumer a long-term functional project. Some of the most important features that the project has to have are maintenance and scalability.
