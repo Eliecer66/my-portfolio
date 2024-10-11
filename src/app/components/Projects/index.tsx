@@ -8,12 +8,24 @@ import nextIcon from "../../../../public/logos/nextJs.png"
 import gitIcon from "../../../../public/logos/github.png"
 import dockerIcon from "../../../../public/logos/docker.png"
 import jsIcon from "../../../../public/logos/js.png"
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 
-const projects = [
+type Techs = {
+  name: string
+  icon: StaticImageData
+}
+
+type Projects = {
+  name: string
+  image: StaticImageData
+  date: string
+  description: string
+  techs: Techs[]
+}
+const projects: Projects[] = [
   {
     name: 'Abaco',
     image: abaco,
@@ -110,7 +122,7 @@ const Projects = () => {
                   </Typography>
                   <Box className='flex flex-col w-full gap-2' >
                     <Box className="flex w-full justify-evenly" >
-                      {element.techs.map((tech: any, index: number) => {
+                      {element.techs.map((tech: Techs, index: number) => {
                         return (
                           <Image
                             className="max-w-8"
