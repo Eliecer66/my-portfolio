@@ -83,63 +83,58 @@ const projects: Projects[] = [
 const Projects = () => {
 
   return (
-    <Box className='flex flex-col w-full p-4 gap-4 rounded-lg' >
-      <Box className='flex justify-between w-full '>
+    <Box className='flex flex-col w-full p-4 gap-6 rounded-lg h-screen' >
+      <Box className='flex justify-center w-full'>
         <Typography
-          variant='body1'
-          className="text-lg font-black"
+          variant='h5'
+          className="font-black"
         >
           Projects
         </Typography>
-        <Typography
-          variant='body1'
-          className="text-lg font-black"
-        >
-          Portfolio
-        </Typography>
       </Box>
-      <Box className="flex w-full justify-evenly ">
-        {
-          projects.map((element, index) => {
-            return (
-              <Card
-                key={index}
-                elevation={2}
-                sx={{ maxWidth: 345 }}
-                className='flex flex-col rounded-xl bg-dark-secondary'
-              >
-                <Image
-                  src={element.image}
-                  className='border-current w-full max-h-40'
-                  alt={element.name}
-                />
-                <CardContent className=" flex flex-col gap-2 h-auto">
-                  <Typography variant="h6" className="text-dark-cuartiary" >
-                    {element.name}
-                  </Typography>
-                  <Typography variant="body2" className="text-dark-cuartiary" >
-                    {element.description}
-                  </Typography>
-                  <Box className='flex flex-col w-full gap-2' >
-                    <Box className="flex w-full justify-evenly" >
-                      {element.techs.map((tech: Techs, index: number) => {
-                        return (
-                          <Image
-                            className="max-w-8"
-                            key={index}
-                            src={tech.icon}
-                            alt={`${index}`}
-                          />
-                        )
+      <Box className="flex w-full h-full items-center ">
+        <Box className="flex w-full justify-center gap-6">
+          {
+            projects.map((element, index) => {
+              return (
+                <Card
+                  key={index}
+                  elevation={2}
+                  className='flex flex-col rounded-xl bg-dark-secondary max-w-[345px]'
+                >
+                  <Image
+                    src={element.image}
+                    className='border-current w-full max-h-40'
+                    alt={element.name}
+                  />
+                  <CardContent className=" flex flex-col gap-2 h-auto bg-dark-secondary">
+                    <Typography variant="h6" className="text-dark-cuartiary" >
+                      {element.name}
+                    </Typography>
+                    <Typography variant="body2" className="text-dark-cuartiary" >
+                      {element.description}
+                    </Typography>
+                    <Box className='flex flex-col w-full gap-2' >
+                      <Box className="flex w-full justify-evenly" >
+                        {element.techs.map((tech: Techs, index: number) => {
+                          return (
+                            <Image
+                              className="max-w-8"
+                              key={index}
+                              src={tech.icon}
+                              alt={`${index}`}
+                            />
+                          )
 
-                      })}
+                        })}
+                      </Box>
                     </Box>
-                  </Box>
-                </CardContent>
-              </Card>
-            )
-          })
-        }
+                  </CardContent>
+                </Card>
+              )
+            })
+          }
+        </Box>
       </Box>
     </Box>
   )

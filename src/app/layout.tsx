@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import avatar from "../../public/album/avatar.png"
+import Image from "next/image";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,9 +30,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav className="flex justify-around w-full p-5">
-          <div className="flex basis-1/2">Jorge</div>
-          <div className="flex basis-1/2 justify-around">
+        <nav className="flex justify-around items-center w-full p-1">
+          <div className="flex basis-1/2 items-center pl-4 min-h-10">
+            <Image
+              src={avatar}
+              alt='My-avatar'
+              className="w-10 flex items-center"
+              objectFit="fill"
+            />
+          </div>
+          <div className="flex basis-1/2 justify-around items-end min-h-10">
             <a>Home</a>
             <a>About</a>
             <a>Projects</a>

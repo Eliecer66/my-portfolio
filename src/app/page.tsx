@@ -8,12 +8,12 @@ import Projects from "./components/Projects";
 
 export default function Home() {
   return (
-    <div className="flex flex-col p-3 md:p-4 gap-4">
+    <div className="flex flex-col gap-4">
       <Introduction />
       <About />
       <Experience />
-      <Stats />
       <Projects />
+      <Stats />
     </div>
   );
 }

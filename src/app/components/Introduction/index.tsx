@@ -4,12 +4,13 @@ import Image from "next/image"
 
 import menuPng from "../../../../public/menu2.svg"
 import profilePicture from "../../../../public/album/profile.jpeg"
-import instagramIcon from "../../../../public/logos/instagram.png"
+import hackerRank from "../../../../public/logos/hackerRank.png"
 
 import linkedinIcon from "../../../../public/logos/linkedin.png"
 import githubIcon from "../../../../public/logos/github.png"
-import xIcon from "../../../../public/logos/x.png"
+import cvIcon from "../../../../public/logos/cv.png"
 import profileData from '../../api/techData'
+import { Typography } from "@mui/material"
 
 // ===========================| INTRODUCTION | ================================
 
@@ -18,7 +19,7 @@ const Introduction: React.FC = () => {
   const techData = profileData.getTechStack()
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 h-screen p-4 justify-center items-center">
       <div className='flex flex-col sm:flex-col md:flex-col lg:flex-row gap-4 container--max-width sm:w-full '>
         {/* Left container */}
         <div className="flex flex-col gap-4 md:basis-1/2">
@@ -31,7 +32,7 @@ const Introduction: React.FC = () => {
                 ¡Make your ideas reality thorough UI designs!
               </span>
               <button
-                className='lg:bottom-0 lg:right-0 flex justify-center text-md p-2 bg-purple-800 border-1 rounded-2xl border-purple-800 xl:p-4 lg:p-3 md:w-3/12 font-bold md:text-md lg:text-sm lg:font-black md:relative md:items-center lg:absolute xl:text-lg'
+                className='lg:bottom-0 lg:right-0 flex justify-center text-md p-2 bg-indigo-950 border-1 rounded-2xl xl:p-4 lg:p-3 md:w-3/12 font-bold md:text-md lg:text-sm lg:font-black md:relative md:items-center lg:absolute xl:text-lg'
               >
                 Hire me! 👋
               </button>
@@ -40,32 +41,32 @@ const Introduction: React.FC = () => {
           {/* Expirience container */}
           <div className="flex flex-col md:flex-row gap-2 w-full h-full justify-evenly">
             <div
-              className="bg-dark-secondary p-4 h-full border-1 flex justify-center flex-col items-center text-lg md:text-xl basis-4/12 rounded-3xl md:min-h-52 lg:min-h-full"
+              className=" bg-sky-950 p-4 h-full border-1 flex justify-center flex-col items-center text-lg md:text-xl basis-4/12 rounded-3xl md:min-h-52 lg:min-h-full"
             >
-              <p className="text-center text-4xl bg-dark-secondary text-white md:text-5xl font-bold border-1">
+              <p className="text-center text-4xl bg-sky-950 text-white md:text-5xl font-bold border-1">
                 2+
               </p>
-              <p className="text-center font-bold bg-dark-secondary text-white">
+              <p className="text-center font-bold bg-sky-950 text-white">
                 Years of experience
               </p>
             </div>
             <div
-              className="bg-dark-secondary p-4 border-1 flex justify-center flex-col items-center text-lg md:text-xl basis-4/12 rounded-3xl md:min-h-52 lg:min-h-full"
+              className="bg-emerald-950 p-4 border-1 flex justify-center flex-col items-center text-lg md:text-xl basis-4/12 rounded-3xl md:min-h-52 lg:min-h-full"
             >
-              <p className="bg-dark-secondary text-4xl md:text-5xl font-bold border-1">
-                10+
+              <p className="bg-emerald-950 text-4xl md:text-5xl font-bold border-1">
+                7+
               </p>
-              <p className="text-center font-bold bg-dark-secondary">
+              <p className="text-center font-bold bg-emerald-950">
                 Projects
               </p>
             </div>
             <div
-              className="bg-dark-secondary p-4 border-1 flex justify-center flex-col items-center text-lg md:text-xl basis-4/12 rounded-3xl md:min-h-52 lg:min-h-full"
+              className="bg-slate-950 p-4 border-1 flex justify-center flex-col items-center text-lg md:text-xl basis-4/12 rounded-3xl md:min-h-52 lg:min-h-full"
             >
-              <p className=" flex justify-center bg-dark-secondary text-white text-4xl md:text-5xl font-bold border-1">
+              <p className=" flex justify-center bg-slate-950 text-white text-4xl md:text-5xl font-bold border-1">
                 5+
               </p>
-              <p className="text-center font-bold bg-dark-secondary text-white">
+              <p className="text-center font-bold bg-slate-950 text-white">
                 Clients
               </p>
             </div>
@@ -74,19 +75,13 @@ const Introduction: React.FC = () => {
         {/* Right container */}
         <div className="flex flex-col gap-4 basis-1/2">
           {/* Graph container */}
-          <div className="bg-dark-secondary flex justify-between rounded-3xl p-4">
-            <p className="bg-dark-secondary font-bold text-xl">
-              Jorge&apos;s Graph
-            </p>
-            <div className="bg-dark-secondary flex items-center">
-              <Image
-                className="icon--container-bg border-current text-white"
-                alt="menu-icon"
-                src={menuPng}
-                width={25}
-                height={25}
-              />
-            </div>
+          <div className="bg-amber-300 flex justify-between items-center rounded-3xl p-3 h-auto">
+            <Typography variant="body1" className="flex font-bold text-xl text-dark-primary">
+              Frontend Web Developer
+            </Typography>
+            <Typography variant="body1" className="flex text-dark-cuartiary bg-dark-primary px-2 rounded-3xl font-black">
+              Jr
+            </Typography>
           </div>
           {/* My Photo */}
           <div className="flex flex-col md:flex-row gap-2">
@@ -124,9 +119,9 @@ const Introduction: React.FC = () => {
               {/* Social media */}
               <div className="flex justify-between p-2 bg-dark-secondary rounded-3xl">
                 <Image
-                  className="max-w-14 icon--container-bg border-current"
-                  alt="instagram-icon"
-                  src={instagramIcon}
+                  className="max-w-14 icon--container-bg border-current rounded-3xl"
+                  alt="hacker-rank"
+                  src={hackerRank}
                 />
                 <Image
                   className="max-w-14 icon--container-bg border-current"
@@ -141,14 +136,14 @@ const Introduction: React.FC = () => {
                 <Image
                   className="max-w-14 icon--container-bg border-current"
                   alt="x-icon"
-                  src={xIcon}
+                  src={cvIcon}
                 />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="flex" >
+      <div className="flex w-full" >
         <div className="flex flex-col bg-dark-secondary gap-2 w-full rounded-2xl p-4 font-black text-xl">
           <div className="flex bg-dark-secondary justify-between w-full ">
             <p className="bg-dark-secondary text-2xl">Technology</p>

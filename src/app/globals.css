@@ -37,11 +37,14 @@ body {
   margin: 0 auto;
 }
 
-
 .icon--container-bg img {
   background-color: var(--dark-secondary);
 }
 
 .MuiGauge-valueText>text {
   fill: inherit;
+}
+
+.center-container {
+  margin: 0 auto;
 }

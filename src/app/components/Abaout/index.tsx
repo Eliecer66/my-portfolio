@@ -4,11 +4,11 @@ import Image from 'next/image'
 
 const About = () => {
   return (
-    <div className='text-dark-cuartiary'>
+    <div className='text-dark-cuartiary h-full p-4'>
       <h2 className='w-full p-4 flex justify-center items-center font-black text-2xl'>
         About me
       </h2>
-      <div className='flex gap-4 items-center'>
+      <div className='flex gap-4 items-center py-8'>
         <div className='flex flex-col basis-8/12 gap-4'>
           <div className='text-dark-cuartiary bg-dark-secondary rounded-xl p-4 gap-2' >
             <div className='flex bg-dark-secondary justify-between w-full '>
