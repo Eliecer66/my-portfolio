@@ -83,7 +83,7 @@ const projects: Projects[] = [
 const Projects = () => {
 
   return (
-    <Box className='flex flex-col w-full p-4 gap-6 rounded-lg h-screen' >
+    <Box id="projects" className='flex flex-col w-full p-4 gap-6 rounded-lg ' >
       <Box className='flex justify-center w-full'>
         <Typography
           variant='h5'
@@ -93,18 +93,18 @@ const Projects = () => {
         </Typography>
       </Box>
       <Box className="flex w-full h-full items-center ">
-        <Box className="flex w-full justify-center gap-6">
+        <Box className="flex lg:flex-row flex-col w-full justify-center items-center gap-6">
           {
             projects.map((element, index) => {
               return (
                 <Card
                   key={index}
                   elevation={2}
-                  className='flex flex-col rounded-xl bg-dark-secondary max-w-[345px]'
+                  className='flex flex-col rounded-xl bg-dark-secondary lg:max-w-[345px] max-w-[450px]'
                 >
                   <Image
                     src={element.image}
-                    className='border-current w-full max-h-40'
+                    className='border-current w-full lg:max-h-40 md:max-h-52'
                     alt={element.name}
                   />
                   <CardContent className=" flex flex-col gap-2 h-auto bg-dark-secondary">

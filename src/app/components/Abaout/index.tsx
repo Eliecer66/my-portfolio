@@ -3,12 +3,13 @@ import myPhoto from '../../../../public/album/myPhoto.jpeg'
 import Image from 'next/image'
 
 const About = () => {
+
   return (
-    <div className='text-dark-cuartiary h-full p-4'>
+    <div id="about" className='text-dark-cuartiary h-full p-4'>
       <h2 className='w-full p-4 flex justify-center items-center font-black text-2xl'>
         About me
       </h2>
-      <div className='flex gap-4 items-center py-8'>
+      <div className='flex flex-col gap-4 items-center py-8 lg:flex-row '>
         <div className='flex flex-col basis-8/12 gap-4'>
           <div className='text-dark-cuartiary bg-dark-secondary rounded-xl p-4 gap-2' >
             <div className='flex bg-dark-secondary justify-between w-full '>
@@ -46,7 +47,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className='flex justify-center items-center basis-1/3'>
+        <div className='lg:flex justify-center items-center sm:hidden '>
           <Image
             quality={100}
             className='border-current rounded-3xl max-w-md'

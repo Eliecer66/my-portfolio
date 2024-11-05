@@ -1,8 +1,6 @@
 'use-client'
 import * as React from "react"
 import Image from "next/image"
-
-import menuPng from "../../../../public/menu2.svg"
 import profilePicture from "../../../../public/album/profile.jpeg"
 import hackerRank from "../../../../public/logos/hackerRank.png"
 
@@ -10,7 +8,10 @@ import linkedinIcon from "../../../../public/logos/linkedin.png"
 import githubIcon from "../../../../public/logos/github.png"
 import cvIcon from "../../../../public/logos/cv.png"
 import profileData from '../../api/techData'
-import { Typography } from "@mui/material"
+// material imports
+import Box from "@mui/material/Box"
+import Typography from "@mui/material/Typography"
+import Tooltip from "@mui/material/Tooltip"
 
 // ===========================| INTRODUCTION | ================================
 
@@ -19,7 +20,10 @@ const Introduction: React.FC = () => {
   const techData = profileData.getTechStack()
 
   return (
-    <div className="flex flex-col gap-4 h-screen p-4 justify-center items-center">
+    <Box
+      id="home"
+      className="flex flex-col gap-4 p-4 justify-start items-center"
+    >
       <div className='flex flex-col sm:flex-col md:flex-col lg:flex-row gap-4 container--max-width sm:w-full '>
         {/* Left container */}
         <div className="flex flex-col gap-4 md:basis-1/2">
@@ -40,36 +44,39 @@ const Introduction: React.FC = () => {
           </div>
           {/* Expirience container */}
           <div className="flex flex-col md:flex-row gap-2 w-full h-full justify-evenly">
-            <div
-              className=" bg-sky-950 p-4 h-full border-1 flex justify-center flex-col items-center text-lg md:text-xl basis-4/12 rounded-3xl md:min-h-52 lg:min-h-full"
+            <a
+              href="#stats"
+              className="bg-indigo-950 hover:bg-indigo-900 p-4 h-full border-1 flex justify-center flex-col items-center text-lg md:text-xl basis-4/12 rounded-3xl md:min-h-52 lg:min-h-full"
             >
-              <p className="text-center text-4xl bg-sky-950 text-white md:text-5xl font-bold border-1">
+              <p className="text-center text-4xl bg-inherit text-white md:text-5xl font-bold border-1">
                 2+
               </p>
-              <p className="text-center font-bold bg-sky-950 text-white">
+              <p className="text-center font-bold bg-inherit text-white">
                 Years of experience
               </p>
-            </div>
-            <div
-              className="bg-emerald-950 p-4 border-1 flex justify-center flex-col items-center text-lg md:text-xl basis-4/12 rounded-3xl md:min-h-52 lg:min-h-full"
+            </a>
+            <a
+              href="#projects"
+              className="bg-emerald-950 hover:bg-emerald-900 p-4 border-1 flex justify-center flex-col items-center text-lg md:text-xl basis-4/12 rounded-3xl md:min-h-52 lg:min-h-full"
             >
-              <p className="bg-emerald-950 text-4xl md:text-5xl font-bold border-1">
+              <p className="bg-inherit text-4xl md:text-5xl font-bold border-1">
                 7+
               </p>
-              <p className="text-center font-bold bg-emerald-950">
+              <p className="text-center font-bold bg-inherit">
                 Projects
               </p>
-            </div>
-            <div
-              className="bg-slate-950 p-4 border-1 flex justify-center flex-col items-center text-lg md:text-xl basis-4/12 rounded-3xl md:min-h-52 lg:min-h-full"
+            </a>
+            <a
+              href="#projects"
+              className="bg-slate-950 p-4 border-1 flex justify-center flex-col items-center text-lg md:text-xl basis-4/12 rounded-3xl md:min-h-52 lg:min-h-full hover:bg-slate-900"
             >
-              <p className=" flex justify-center bg-slate-950 text-white text-4xl md:text-5xl font-bold border-1">
+              <p className="flex justify-center bg-inherit text-white text-4xl md:text-5xl font-bold border-1">
                 5+
               </p>
-              <p className="text-center font-bold bg-slate-950 text-white">
+              <p className="text-center font-bold bg-inherit text-white">
                 Clients
               </p>
-            </div>
+            </a>
           </div>
         </div>
         {/* Right container */}
@@ -118,26 +125,42 @@ const Introduction: React.FC = () => {
               </div>
               {/* Social media */}
               <div className="flex justify-between p-2 bg-dark-secondary rounded-3xl">
-                <Image
-                  className="max-w-14 icon--container-bg border-current rounded-3xl"
-                  alt="hacker-rank"
-                  src={hackerRank}
-                />
-                <Image
-                  className="max-w-14 icon--container-bg border-current"
-                  alt="linkedin-icon"
-                  src={linkedinIcon}
-                />
-                <Image
-                  className="max-w-14 icon--container-bg border-current"
-                  alt="github-Icon"
-                  src={githubIcon}
-                />
-                <Image
-                  className="max-w-14 icon--container-bg border-current"
-                  alt="x-icon"
-                  src={cvIcon}
-                />
+                <Tooltip title="Hackerrank">
+                  <a href="https://www.hackerrank.com/profile/jorge_eacostadi1" target="_blank" >
+                    <Image
+                      className="max-w-14 icon--container-bg border-current rounded-3xl"
+                      alt="hacker-rank"
+                      src={hackerRank}
+                    />
+                  </a>
+                </Tooltip>
+                <Tooltip title="Linkedin">
+                  <a href="https://www.linkedin.com/in/jeacostad/" target="_blank">
+                    <Image
+                      className="max-w-14 icon--container-bg border-current"
+                      alt="linkedin-icon"
+                      src={linkedinIcon}
+                    />
+                  </a>
+                </Tooltip>
+                <Tooltip title="Github">
+                  <a href="https://github.com/Eliecer66" target="_blank" >
+                    <Image
+                      className="max-w-14 icon--container-bg border-current"
+                      alt="github-Icon"
+                      src={githubIcon}
+                    />
+                  </a>
+                </Tooltip>
+                <Tooltip title="Resume">
+                  <a href="https://drive.google.com/file/d/1iiIx_iBFTOsqULKJFdj1epYJuheheNXS/view?usp=drive_link" target="_blank">
+                    <Image
+                      className="max-w-14 icon--container-bg border-current"
+                      alt="x-icon"
+                      src={cvIcon}
+                    />
+                  </a>
+                </Tooltip>
               </div>
             </div>
           </div>
@@ -165,7 +188,7 @@ const Introduction: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Box>
   )
 }
 

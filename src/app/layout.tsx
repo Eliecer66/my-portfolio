@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import avatar from "../../public/album/avatar.png"
 import Image from "next/image";
+import Box from "@mui/material/Box";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,23 +31,29 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav className="flex justify-around items-center w-full p-1">
-          <div className="flex basis-1/2 items-center pl-4 min-h-10">
-            <Image
-              src={avatar}
-              alt='My-avatar'
-              className="w-10 flex items-center"
-              objectFit="fill"
-            />
+        <nav
+          className="flex justify-around border border-gray-950 border-b-amber-300 items-center w-full py-4 fixed top-0 bg-gray-900/80 z-10 backdrop-blur"
+        >
+          <div className="flex basis-1/2 items-center justify-start min-h-10">
+            <a href="#home" className="scroll-smooth">
+              <Image
+                src={avatar}
+                alt='My-avatar'
+                className="w-10 flex items-center"
+                objectFit="fill"
+              />
+            </a>
           </div>
           <div className="flex basis-1/2 justify-around items-end min-h-10">
-            <a>Home</a>
-            <a>About</a>
-            <a>Projects</a>
-            <a>Stats</a>
+            <a className="font-bold" href="#home" >Home</a>
+            <a className="font-bold" href="#about" >About</a>
+            <a className="font-bold" href="#projects" >Projects</a>
+            <a className="font-bold" href="#stats" >Stats</a>
           </div>
         </nav>
-        {children}
+        <Box className="lg:pt-16 md:pt-20">
+          {children}
+        </Box>
         <footer className="bg-dark-primary px-4 py-10">
           © 2024 Jorge Acosta
         </footer>

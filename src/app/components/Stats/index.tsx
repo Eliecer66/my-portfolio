@@ -27,11 +27,41 @@ const settings = {
 
 export default function Stats() {
   return (
-    <div className='p-16 flex justify-center flex-col w-full gap-5 bg-gradient-to-r from-transparent to-emerald-950'>
+    <div id="stats" className='p-16 flex justify-center flex-col w-full gap-5 bg-gradient-to-r from-transparent to-emerald-950'>
       <Typography variant="h5" className="w-full flex justify-center" >
         Stadistics
       </Typography>
-      <Box className='flex w-full justify-evenly gap-6'>
+      <Box className='flex lg:flex-row lg:items-stretch w-full justify-evenly gap-6 sm:flex-col sm:justify-center sm:items-center'>
+        <Stack
+          className='flex items-center justify-center bg-dark-secondary rounded-lg min-h-60 max-w-md'
+        >
+          <Typography
+            variant='body1'
+            className='w-full flex justify-center bg-zinc-900 text-dark-cuartiary p-6 rounded-t-lg'
+          >
+            Total hours
+          </Typography>
+          <Gauge
+            {...settings}
+            cornerRadius={50}
+            sx={(theme) => ({
+              [`& .${gaugeClasses.valueText}`]: {
+                fontSize: 17,
+                transform: 'translate(0px, 0px)',
+                fill: 'white'
+              },
+              [`& .${gaugeClasses.valueArc}`]: {
+                fill: '#4b00aa',
+              },
+              [`& .${gaugeClasses.referenceArc}`]: {
+                fill: theme.palette.text.disabled,
+              },
+            })}
+            text={
+              ({ value, valueMax }) => `${value} / ${valueMax}`
+            }
+          />
+        </Stack>
         < Stack
           className='flex items-center justify-center bg-dark-secondary rounded-lg min-h-60 max-w-md'
         >
@@ -41,7 +71,7 @@ export default function Stats() {
           >
             Invested hours per year
           </Typography>
-          <Box className="p-4 basis-2/3" >
+          <Box className="p-4 md:p-6 basis-2/3" >
             <PieChart
               series={[
                 {
@@ -74,42 +104,12 @@ export default function Stats() {
             />
           </Box>
         </Stack >
-        <Stack
-          className='flex items-center justify-center bg-dark-secondary rounded-lg min-h-60 max-w-md'
-        >
-          <Typography
-            variant='body1'
-            className='w-full flex justify-center bg-zinc-900 text-dark-cuartiary p-6 rounded-t-lg'
-          >
-            Total hours
-          </Typography>
-          <Gauge
-            {...settings}
-            cornerRadius={50}
-            sx={(theme) => ({
-              [`& .${gaugeClasses.valueText}`]: {
-                fontSize: 17,
-                transform: 'translate(0px, 0px)',
-                fill: 'white'
-              },
-              [`& .${gaugeClasses.valueArc}`]: {
-                fill: '#4b00aa',
-              },
-              [`& .${gaugeClasses.referenceArc}`]: {
-                fill: theme.palette.text.disabled,
-              },
-            })}
-            text={
-              ({ value, valueMax }) => `${value} / ${valueMax}`
-            }
-          />
-        </Stack>
       </Box >
       <Box
         className="flex center-container w-10/12 flex-col bg-slate-800 rounded-lg"
       >
         <TableContainer component={Paper} className="bg-slate-800">
-          <Table className=" bg-dark-secondary rounded-lg" sx={{ minWidth: 650 }} aria-label="simple table">
+          <Table className=" bg-dark-secondary rounded-lg w-full" aria-label="simple table">
             <TableHead>
               <TableRow className="bg-zinc-900">
                 <TableCell className="text-white">
