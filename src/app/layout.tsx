@@ -45,13 +45,13 @@ export default function RootLayout({
             </a>
           </div>
           <div className="flex basis-1/2 justify-around items-end min-h-10">
-            <a className="font-bold" href="#home" >Home</a>
-            <a className="font-bold" href="#about" >About</a>
-            <a className="font-bold" href="#projects" >Projects</a>
-            <a className="font-bold" href="#stats" >Stats</a>
+            <a className="font-bold lg:tex-md text-sm" href="#home" >Home</a>
+            <a className="font-bold lg:tex-md text-sm" href="#about" >About</a>
+            <a className="font-bold lg:tex-md text-sm" href="#projects" >Projects</a>
+            <a className="font-bold lg:tex-md text-sm" href="#stats" >Stats</a>
           </div>
         </nav>
-        <Box className="lg:pt-16 md:pt-20">
+        <Box className="lg:pt-16 md:pt-20 pt-20">
           {children}
         </Box>
         <footer className="bg-dark-primary px-4 py-10">

@@ -18,7 +18,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 const settings = {
-  width: 500,
+  width: 400,
   height: 200,
   value: 1721,
   valueMin: 10,
@@ -27,17 +27,19 @@ const settings = {
 
 export default function Stats() {
   return (
-    <div id="stats" className='p-16 flex justify-center flex-col w-full gap-5 bg-gradient-to-r from-transparent to-emerald-950'>
-      <Typography variant="h5" className="w-full flex justify-center" >
+    <div
+      id="stats"
+      className='px-2 py-10 lg:p-16 flex justify-center flex-col w-full gap-24 bg-gradient-to-r from-transparent to-emerald-950'>
+      <Typography variant="h5" className="w-full flex justify-center font-black" >
         Stadistics
       </Typography>
-      <Box className='flex lg:flex-row lg:items-stretch w-full justify-evenly gap-6 sm:flex-col sm:justify-center sm:items-center'>
+      <Box className='flex flex-col lg:flex-row lg:items-stretch w-full lg:justify-evenly gap-10 justify-center items-center'>
         <Stack
-          className='flex items-center justify-center bg-dark-secondary rounded-lg min-h-60 max-w-md'
+          className='flex items-center justify-center bg-dark-secondary rounded-lg min-h-60 lg:max-w-md max-w-xs'
         >
           <Typography
             variant='body1'
-            className='w-full flex justify-center bg-zinc-900 text-dark-cuartiary p-6 rounded-t-lg'
+            className='w-full flex justify-center bg-zinc-900 text-dark-cuartiary p-6 rounded-t-lg text-sm lg:text-md'
           >
             Total hours
           </Typography>
@@ -63,11 +65,11 @@ export default function Stats() {
           />
         </Stack>
         < Stack
-          className='flex items-center justify-center bg-dark-secondary rounded-lg min-h-60 max-w-md'
+          className='flex items-center justify-center bg-dark-secondary rounded-lg min-h-60 lg:max-w-md max-w-xs'
         >
           <Typography
             variant='body1'
-            className='w-full flex justify-center bg-zinc-900 text-dark-cuartiary p-6 rounded-t-lg'
+            className='w-full flex justify-center bg-zinc-900 text-dark-cuartiary p-6 rounded-t-lg lg:text-md text-sm'
           >
             Invested hours per year
           </Typography>
@@ -85,7 +87,7 @@ export default function Stats() {
                   ],
                 }
               ]}
-              width={400}
+              className="lg:w-[400px] w-80 text-sm lg:text-md"
               height={200}
               slotProps={{
                 legend: {
@@ -109,16 +111,19 @@ export default function Stats() {
         className="flex center-container w-10/12 flex-col bg-slate-800 rounded-lg"
       >
         <TableContainer component={Paper} className="bg-slate-800">
-          <Table className=" bg-dark-secondary rounded-lg w-full" aria-label="simple table">
+          <Table
+            className="bg-dark-secondary rounded-lg w-full"
+            aria-label="simple table"
+          >
             <TableHead>
               <TableRow className="bg-zinc-900">
                 <TableCell className="text-white">
-                  <Typography variant="body1" >
+                  <Typography variant="body2" className="text-xs font-bold" align="center" >
                     Technology Stack
                   </Typography>
                 </TableCell>
-                <TableCell className="text-white" align="center">Achievements</TableCell>
-                <TableCell className="text-white" align="center">Technology Proficiency</TableCell>
+                <TableCell className="text-white text-xs font-bold" align="center">Achievements</TableCell>
+                <TableCell className="text-white text-xs font-bold" align="center">Technology Proficiency</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -132,14 +137,14 @@ export default function Stats() {
                       <Image
                         src={row.image}
                         alt={row.name}
-                        className="max-w-6"
+                        className="lg:max-w-6 max-w-4"
                       />
-                      <Typography variant="body1" className="text-white" >
+                      <Typography variant="body1" className="text-white text-sm" >
                         {row.name}
                       </Typography>
                     </Box>
                   </TableCell>
-                  <TableCell className="text-white" align="center">
+                  <TableCell className="text-white text-sm" align="center">
                     {row.badgets.map((badget, index) => {
                       if (badget.done) {
                         return (
@@ -147,7 +152,7 @@ export default function Stats() {
                             key={index}
                             title={badget.name}
                           >
-                            <ShieldIcon fontSize='small' className="text-zinc-200" />
+                            <ShieldIcon fontSize='small' className="text-zinc-200 lg:text-xl text-xs" />
                           </Tooltip>
                         )
                       }

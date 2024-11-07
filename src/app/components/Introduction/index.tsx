@@ -172,7 +172,7 @@ const Introduction: React.FC = () => {
             <p className="bg-dark-secondary text-2xl">Technology</p>
             <p className="bg-dark-secondary font-normal 2xl">Stack</p>
           </div>
-          <div className="bg-dark-secondary flex justify-evenly items-center p-4 hover:cursor-pointer" >
+          <div className="bg-dark-secondary flex justify-between items-center lg:p-4 p-2 hover:cursor-pointer w-ful" >
             {techData.map((element, index) => {
               return (
                 <Image
@@ -180,8 +180,7 @@ const Introduction: React.FC = () => {
                   key={index}
                   src={element.image}
                   alt={`logo-${element.name}`}
-                  width={60}
-                  height={60}
+                  className="lg:max-w-16 sm:max-w-10 max-w-8"
                 />
               )
             })}

@@ -47,7 +47,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className='lg:flex justify-center items-center sm:hidden '>
+        <div className='lg:flex justify-center items-center hidden '>
           <Image
             quality={100}
             className='border-current rounded-3xl max-w-md'

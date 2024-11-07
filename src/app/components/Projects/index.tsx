@@ -100,7 +100,7 @@ const Projects = () => {
                 <Card
                   key={index}
                   elevation={2}
-                  className='flex flex-col rounded-xl bg-dark-secondary lg:max-w-[345px] max-w-[450px]'
+                  className='flex flex-col rounded-xl bg-dark-secondary max-w-[345px] lg:max-w-[450px]'
                 >
                   <Image
                     src={element.image}
