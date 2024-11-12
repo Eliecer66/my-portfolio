@@ -83,10 +83,12 @@ const projects: Projects[] = [
 const Projects = () => {
 
   return (
-    <Box id="projects" className='flex flex-col w-full p-4 gap-6 rounded-lg ' >
+    <Box
+      id="projects"
+      className='flex flex-col w-full px-4 py-36 h-full gap-6 items-center justify-between rounded-lg container--max-width' >
       <Box className='flex justify-center w-full'>
         <Typography
-          variant='h5'
+          variant='h4'
           className="font-black"
         >
           Projects

@@ -1,3 +1,4 @@
+"use client"
 import * as React from "react"
 // components imports 
 import Introduction from "./components/Introduction";

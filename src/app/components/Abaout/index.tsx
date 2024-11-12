@@ -1,14 +1,19 @@
 import * as React from 'react'
 import myPhoto from '../../../../public/album/myPhoto.jpeg'
 import Image from 'next/image'
-
+import { Typography } from '@mui/material'
 const About = () => {
 
   return (
-    <div id="about" className='text-dark-cuartiary h-full p-4'>
-      <h2 className='w-full p-4 flex justify-center items-center font-black text-2xl'>
+    <div
+      id="about"
+      className='text-dark-cuartiary h-full py-16 px-2 container--max-width'>
+      <Typography
+        variant="h4"
+        className='w-full p-4 flex justify-center items-center font-black'
+      >
         About me
-      </h2>
+      </Typography>
       <div className='flex flex-col gap-4 items-center py-8 lg:flex-row '>
         <div className='flex flex-col basis-8/12 gap-4'>
           <div className='text-dark-cuartiary bg-dark-secondary rounded-xl p-4 gap-2' >

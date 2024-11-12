@@ -6,7 +6,8 @@ const Experience = () => {
 
   return (
     <Box className="flex bg-gradient-to-r from-indigo-950 to-transparent flex-col w-full items-center justify-around lg:py-44 py-36 px-4 ">
-      <Box className="flex lg:flex-row flex-col-reverse justify-between" >
+      <Box
+        className="flex lg:flex-row flex-col-reverse justify-between container--max-width" >
         <Box className="flex w-full basis-2/3">
           <video
             className="h-full rounded-2xl"
