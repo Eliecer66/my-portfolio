@@ -85,7 +85,7 @@ const Projects = () => {
   return (
     <Box
       id="projects"
-      className='flex flex-col w-full px-4 py-36 h-full gap-6 items-center justify-between rounded-lg container--max-width' >
+      className='flex flex-col w-full px-4 py-36 gap-28 items-center justify-between rounded-lg container--max-width' >
       <Box className='flex justify-center w-full'>
         <Typography
           variant='h4'
@@ -102,7 +102,7 @@ const Projects = () => {
                 <Card
                   key={index}
                   elevation={2}
-                  className='flex flex-col rounded-xl bg-dark-secondary max-w-[345px] lg:max-w-[450px]'
+                  className='flex flex-col rounded-xl bg-dark-secondary max-w-[345px] lg:max-w-[370px]'
                 >
                   <Image
                     src={element.image}

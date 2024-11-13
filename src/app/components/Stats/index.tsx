@@ -33,7 +33,7 @@ export default function Stats() {
       <Box
         className="px-2 py-24 lg:p-16 flex justify-center flex-col w-full gap-24 container--max-width items-center"
       >
-        <Typography variant="h5" className="w-full flex justify-center font-black" >
+        <Typography variant="h4" className="w-full flex justify-center font-black" >
           Stadistics
         </Typography>
         <Box className='flex flex-col lg:flex-row lg:items-stretch w-full lg:justify-evenly gap-10 justify-center items-center'>
