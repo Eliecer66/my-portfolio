@@ -16,7 +16,6 @@ import Tooltip from "@mui/material/Tooltip"
 // ===========================| INTRODUCTION | ================================
 
 const Introduction: React.FC = () => {
-
   const techData = profileData.getTechStack()
 
   return (
@@ -41,7 +40,7 @@ const Introduction: React.FC = () => {
               <button
                 className='lg:bottom-0 lg:right-0 flex justify-center text-md p-2 bg-indigo-950 border-1 rounded-2xl xl:p-4 lg:p-3 md:w-3/12 font-bold md:text-md lg:text-sm lg:font-black md:relative md:items-center lg:absolute xl:text-lg'
               >
-                Hire me! 👋
+                <a href="#contact" >Hire me! 👋 </a>
               </button>
             </Box>
           </Box>
