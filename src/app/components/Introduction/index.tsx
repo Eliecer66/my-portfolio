@@ -49,52 +49,46 @@ const Introduction: React.FC = () => {
               href="#stats"
               className="bg-indigo-950 hover:bg-indigo-900 p-4 h-full border-1 flex justify-center flex-col items-center text-lg md:text-xl basis-4/12 rounded-3xl md:min-h-52 lg:min-h-full"
             >
-              <Typography
-                variant="h6"
+              <p
                 className="text-center text-4xl bg-inherit text-white md:text-5xl font-bold border-1"
               >
                 2+
-              </Typography>
-              <Typography
+              </p>
+              <p
                 className="text-center font-bold bg-inherit text-white"
-                variant="body1"
               >
                 Years of experience
-              </Typography>
+              </p>
             </a>
             <a
               href="#projects"
               className="bg-emerald-950 hover:bg-emerald-900 p-4 border-1 flex justify-center flex-col items-center text-lg md:text-xl basis-4/12 rounded-3xl md:min-h-52 lg:min-h-full"
             >
-              <Typography
+              <p
                 className="bg-inherit text-4xl md:text-5xl font-bold border-1"
-                variant="h6"
               >
                 2+
-              </Typography>
-              <Typography
+              </p>
+              <p
                 className="text-center font-bold bg-inherit"
-                variant="body1"
               >
                 Projects
-              </Typography>
+              </p>
             </a>
             <a
               href="#projects"
               className="bg-slate-950 p-4 border-1 flex justify-center flex-col items-center text-lg md:text-xl basis-4/12 rounded-3xl md:min-h-52 lg:min-h-full hover:bg-slate-900"
             >
-              <Typography
+              <p
                 className="flex justify-center bg-inherit text-white text-4xl md:text-5xl font-bold border-1"
-                variant="h6"
               >
                 2+
-              </Typography>
-              <Typography
+              </p>
+              <p
                 className="text-center font-bold bg-inherit text-white"
-                variant="body1"
               >
                 Clients
-              </Typography>
+              </p>
             </a>
           </Box>
         </Box>
@@ -102,12 +96,11 @@ const Introduction: React.FC = () => {
         <Box className="flex flex-col gap-4 basis-1/2">
           {/* Graph container */}
           <Box className="bg-amber-300 flex justify-between items-center rounded-3xl p-3 h-auto">
-            <Typography
-              variant="body1"
+            <p
               className="flex font-bold text-xl text-dark-primary"
             >
               Frontend Web Developer
-            </Typography>
+            </p>
             <Typography
               variant="body1"
               className="flex text-dark-cuartiary bg-dark-primary px-2 rounded-3xl font-black"
