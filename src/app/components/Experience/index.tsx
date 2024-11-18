@@ -14,7 +14,7 @@ const Experience = () => {
             muted
             loop
           >
-            <source src="/videos/meCoding.webm" type="video/webm" />
+            <source src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/videos/meCoding.webm`} type="video/webm" />
             Your browser does not support the video tag.
           </video>
         </div>
