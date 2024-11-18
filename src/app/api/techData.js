@@ -1,3 +1,4 @@
+import shopifyIcon from "../../../public/icons/shopify.svg"
 const jsIcon = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg"
 const reactLogo = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
 const tsLogo = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg"
@@ -7,6 +8,7 @@ const taiwindLogo = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/t
 const cssLogo = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg"
 const htmlLogo = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg"
 const muiLogo = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg"
+
 
 const getTechStack = () => ([
   {
@@ -44,6 +46,10 @@ const getTechStack = () => ([
   {
     name: 'MaterialUI',
     image: muiLogo
+  },
+  {
+    name: 'Shopify',
+    image: shopifyIcon
   }
 ])
 

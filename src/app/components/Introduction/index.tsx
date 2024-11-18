@@ -31,9 +31,9 @@ const Introduction: React.FC = () => {
               className='relative w-full flex flex-col items-center bg-dark-secondary p-1 sm:p-3 gap-2 md:min-h-44 md:gap-4 md:items-center lg:gap-0 lg:items-start'
             >
               <p
-                className="inline-flex text-center font-black justify-start text-3xl md:w-full sm:w-10/12 bg-dark-secondary xs:text-2xl sm:text-3xl md:text-5xl md:text-center lg:text-5xl xl:text-6xl lg:text-start"
+                className="inline-flex text-center font-black justify-start text-3xl md:w-full sm:w-10/12 bg-dark-secondary xs:text-2xl sm:text-3xl md:text-5xl md:text-center lg:text-4xl xl:text-5xl lg:text-start"
               >
-                ¡Make your ideas reality thorough UI designs!
+                Transforming Ideas into Interactive and Impactful Digital Experiences!
               </p>
               <button
                 className='lg:bottom-0 lg:right-0 flex justify-center text-md p-2 bg-indigo-950 border-1 rounded-2xl xl:p-4 lg:p-3 md:w-3/12 font-bold md:text-md lg:text-sm lg:font-black md:relative md:items-center lg:absolute xl:text-lg'
