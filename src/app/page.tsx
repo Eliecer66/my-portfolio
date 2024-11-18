@@ -11,7 +11,7 @@ import Box from "@mui/material/Box";
 export default function Home() {
 
   return (
-    <Box className="flex flex-col justify-evenly gap-4">
+    <Box className="flex flex-col justify-evenly">
       <Introduction />
       <About />
       <Experience />

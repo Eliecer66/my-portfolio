@@ -205,14 +205,14 @@ const Introduction: React.FC = () => {
       </Box>
       <Box className="flex w-full container--max-width" >
         <Box className="flex flex-col gap-2 w-full rounded-2xl p-4 font-black text-xl">
-          <Box className="flex justify-evenly items-center lg:p-2 p-2 hover:cursor-pointer w-ful" >
+          <Box className="flex justify-evenly items-center lg:p-2 p-2 hover:cursor-pointer w-ful gap-2" >
             {techData.map((element, index) => {
               return (
                 <Tooltip key={index} title={element.name} >
                   <Image
                     src={element.image}
                     alt={`logo-${element.name}`}
-                    className="lg:max-w-12 sm:max-w-10 max-w-8 w-12"
+                    className="lg:max-w-12 sm:max-w-10 max-w-6 w-12"
                     width={500}
                     height={500}
                   />

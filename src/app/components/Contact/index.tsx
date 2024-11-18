@@ -1,20 +1,20 @@
 'use client'
 import Box from "@mui/material/Box"
-import Typography from "@mui/material/Typography"
 import React from "react"
 
 const Contact = () => {
 
   return (
-    <Box id="contact" className="container--max-width w-full">
-      <Box className="flex flex-col justify-center items-center gap-12" >
-        <Typography variant="h4" className="w-1/2 p-4">
+    <Box id="contact" className="container--max-width w-full h-full py-12">
+      <Box className="flex flex-col justify-center items-center" >
+        <p className="w-1/2 p-4 text-2xl font-bold">
           Contact me
-        </Typography>
+        </p>
         <form
           className="flex flex-col text-black w-1/2 p-4 gap-4"
           action="https://formsubmit.co/2ffa2212abdbe704c633d6993f695903"
           method="post"
+          target="_blank"
         >
           <div className="flex flex-col lg:flex-row w-full justify-between gap-2">
             <input

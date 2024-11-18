@@ -1,3 +1,4 @@
+"use client"
 import * as React from 'react';
 // local imports
 import movies from "../../../../public/projects/movies.png"

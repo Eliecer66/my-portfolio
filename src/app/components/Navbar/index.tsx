@@ -50,7 +50,7 @@ export default function NavBar() {
   }, [open]);
   return (
     <nav
-      className="flex justify-around border border-gray-950 border-b-amber-300 items-center w-full py-4 fixed top-0 bg-gray-900/80 z-10 backdrop-blur"
+      className="flex justify-around items-center w-full py-4 fixed top-0 bg-gray-900/80 z-10 backdrop-blur"
     >
       <div className="flex w-full container--max-width">
         <div className="flex basis-1/2 items-center justify-start min-h-10 pl-4">
