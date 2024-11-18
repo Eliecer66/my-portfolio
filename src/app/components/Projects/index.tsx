@@ -1,21 +1,28 @@
 import * as React from 'react';
-import Box from "@mui/material/Box";
-import abaco from "../../../../public/projects/abaco.png"
+// local imports
+import movies from "../../../../public/projects/movies.png"
+import quizzical from "../../../../public/projects/quizzical.png"
 import makeup from "../../../../public/projects/makeup.png"
-import noganadores from "../../../../public/projects/noganadores.png"
-import reactIcon from "../../../../public/logos/react.png"
-import nextIcon from "../../../../public/logos/nextJs.png"
-import gitIcon from "../../../../public/logos/github.png"
-import dockerIcon from "../../../../public/logos/docker.png"
-import jsIcon from "../../../../public/logos/js.png"
+// material imports
+import Box from "@mui/material/Box";
 import Image, { StaticImageData } from 'next/image'
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import shopifyIcon from "../../../../public/icons/shopify.svg"
+
+// remote imports
+const reactIcon = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+const jsIcon = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg"
+const typeIcon = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+const nextIcon = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+const sassIcon = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg"
+const cssIcon = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg"
+const htmlIcon = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg"
 
 type Techs = {
   name: string
-  icon: StaticImageData
+  icon: string | StaticImageData
 }
 
 type Projects = {
@@ -27,54 +34,70 @@ type Projects = {
 }
 const projects: Projects[] = [
   {
-    name: 'Abaco',
-    image: abaco,
+    name: 'Movies +',
+    image: movies,
     date: 'August 14, 2024',
-    description: 'Some description about what I did. I develop this project for the company and I apply the following technologies',
+    description: 'I built this project to apply and expand my knowledge in SASS, JavaScript, and React, focusing on creating a performant, content-rich application. My primary goal was to effectively manage a substantial amount of content without sacrificing performance.',
     techs: [
       {
         name: 'React',
         icon: reactIcon
       },
       {
-        name: 'Next',
+        name: 'Nextjs',
         icon: nextIcon
       },
       {
-        name: 'Git',
-        icon: gitIcon
+        name: 'TypeScript',
+        icon: typeIcon
+      },
+      {
+        name: 'SASS',
+        icon: sassIcon
+      }
+    ]
+  },
+  {
+    name: 'Shop',
+    image: makeup,
+    date: 'June 30, 2024',
+    description: 'This project was designed to showcase my expertise in Shopify, CSS3, HTML5, and JavaScript. My goal was to build a seamless, responsive user experience within the Shopify platform, leveraging modern web standards to create clean, interactive, and visually engaging designs.',
+    techs: [
+      {
+        name: 'JavaScript',
+        icon: jsIcon
+      },
+      {
+        name: 'CSS3',
+        icon: cssIcon
+      },
+      {
+        name: 'Shopify',
+        icon: shopifyIcon
+      },
+      {
+        name: 'HML5',
+        icon: htmlIcon
+      }
+    ]
+  },
+  {
+    name: 'Quizzical',
+    image: quizzical,
+    date: 'May 23, 2024',
+    description: 'I created this project to practice foundational front-end functionalities, including data fetching, working with local storage, and managing component interactions using JavaScript and React. This project gave me a solid understanding of React fundamentals, such as using hooks, interacting with the DOM.',
+    techs: [
+      {
+        name: 'React',
+        icon: reactIcon
+      },
+      {
+        name: 'CSS3',
+        icon: cssIcon
       },
       {
         name: 'JavaScript',
         icon: jsIcon
-      }
-    ]
-  },
-  {
-    name: 'Makeup',
-    image: makeup,
-    date: 'June 30, 2024',
-    description: 'Some description about what I did. I develop this project for the company and I apply the following technologies',
-    techs: [
-      {
-        name: 'React',
-        icon: reactIcon
-      },
-      {
-        name: 'Docker',
-        icon: dockerIcon
-      }
-    ]
-  },
-  {
-    name: 'Sorteo No Ganadores',
-    image: noganadores,
-    date: 'May 23, 2024',
-    description: 'Some description about what I did. I develop this project for the company and I apply the following technologiesome description about what I did',
-    techs: [
-      {
-        name: 'React',
-        icon: reactIcon
       }
     ]
   }
@@ -102,14 +125,16 @@ const Projects = () => {
                 <Card
                   key={index}
                   elevation={2}
-                  className='flex flex-col rounded-xl bg-dark-secondary max-w-[345px] lg:max-w-[370px]'
+                  className='flex flex-col lg:h-[450px] rounded-xl bg-dark-secondary max-w-[345px] lg:max-w-[370px]'
                 >
                   <Image
+                    width={500}
+                    height={500}
                     src={element.image}
                     className='border-current w-full lg:max-h-40 md:max-h-52'
                     alt={element.name}
                   />
-                  <CardContent className=" flex flex-col gap-2 h-auto bg-dark-secondary">
+                  <CardContent className=" flex flex-col gap-2 h-full bg-dark-secondary justify-around">
                     <Typography variant="h6" className="text-dark-cuartiary" >
                       {element.name}
                     </Typography>
@@ -121,6 +146,8 @@ const Projects = () => {
                         {element.techs.map((tech: Techs, index: number) => {
                           return (
                             <Image
+                              width={500}
+                              height={500}
                               className="max-w-8"
                               key={index}
                               src={tech.icon}

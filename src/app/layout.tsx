@@ -16,9 +16,9 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body>
+      <body className="h-screen">
         <NavBar />
-        <Box className="lg:pt-16 md:pt-20 pt-20">
+        <Box className="lg:pt-18 md:pt-20 pt-20">
           {children}
         </Box>
         <footer className="bg-dark-primary px-4 py-10 container--max-width">

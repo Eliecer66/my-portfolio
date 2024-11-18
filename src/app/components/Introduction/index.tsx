@@ -21,7 +21,7 @@ const Introduction: React.FC = () => {
   return (
     <Box
       id="home"
-      className="flex flex-col gap-4 p-4 justify-start items-center"
+      className="flex flex-col gap-6 p-4 justify-start items-center"
     >
       <Box className='flex flex-col sm:flex-col md:flex-col lg:flex-row gap-4 container--max-width sm:w-full '>
         {/* Left container */}
@@ -71,7 +71,7 @@ const Introduction: React.FC = () => {
                 className="bg-inherit text-4xl md:text-5xl font-bold border-1"
                 variant="h6"
               >
-                7+
+                2+
               </Typography>
               <Typography
                 className="text-center font-bold bg-inherit"
@@ -88,7 +88,7 @@ const Introduction: React.FC = () => {
                 className="flex justify-center bg-inherit text-white text-4xl md:text-5xl font-bold border-1"
                 variant="h6"
               >
-                5+
+                2+
               </Typography>
               <Typography
                 className="text-center font-bold bg-inherit text-white"
@@ -152,7 +152,7 @@ const Introduction: React.FC = () => {
                 <Box className="flex justify-between bg-dark-secondary">
                   <Typography
                     variant="body1"
-                    className="bg-dark-secondary"
+                    className="bg-dark-secondary font-black"
                   >
                     Location:
                   </Typography>
@@ -213,31 +213,19 @@ const Introduction: React.FC = () => {
         </Box>
       </Box>
       <Box className="flex w-full container--max-width" >
-        <Box className="flex flex-col bg-dark-secondary gap-2 w-full rounded-2xl p-4 font-black text-xl">
-          <Box className="flex bg-dark-secondary justify-between w-full ">
-            <Typography
-              variant="body1"
-              className="bg-dark-secondary text-2xl"
-            >
-              Technology
-            </Typography>
-            <Typography
-              variant="body1"
-              className="bg-dark-secondary font-normal 2xl"
-            >
-              Stack
-            </Typography>
-          </Box>
-          <Box className="bg-dark-secondary flex justify-between items-center lg:p-4 p-2 hover:cursor-pointer w-ful" >
+        <Box className="flex flex-col gap-2 w-full rounded-2xl p-4 font-black text-xl">
+          <Box className="flex justify-evenly items-center lg:p-2 p-2 hover:cursor-pointer w-ful" >
             {techData.map((element, index) => {
               return (
-                <Image
-                  title={element.name}
-                  key={index}
-                  src={element.image}
-                  alt={`logo-${element.name}`}
-                  className="lg:max-w-16 sm:max-w-10 max-w-8"
-                />
+                <Tooltip key={index} title={element.name} >
+                  <Image
+                    src={element.image}
+                    alt={`logo-${element.name}`}
+                    className="lg:max-w-12 sm:max-w-10 max-w-8 w-12"
+                    width={500}
+                    height={500}
+                  />
+                </Tooltip>
               )
             })}
           </Box>
