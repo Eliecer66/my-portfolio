@@ -1,5 +1,4 @@
-'use client';
-
+"use client"
 import * as React from 'react';
 import Stack from '@mui/material/Stack';
 import { PieChart, pieArcLabelClasses } from '@mui/x-charts/PieChart';
