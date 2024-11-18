@@ -92,7 +92,7 @@ export default function Stats() {
                 ]}
                 className="lg:w-[400px] sm:w-80 w-64 p-4 text-sm lg:text-lg"
                 height={200}
-                width={300}
+                width={290}
                 slotProps={{
                   legend: {
                     padding: 0,
